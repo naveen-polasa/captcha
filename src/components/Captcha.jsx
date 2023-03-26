@@ -11,8 +11,8 @@ const Captcha = () => {
     if (!userVal) return;
     newResult(
       String(userVal) === captcha
-        ? { msg: "Verification Passed", res: true }
-        : { msg: "Verification Failed", res: false }
+        ? { msg: "Validation Passed", res: true }
+        : { msg: "Validation Failed", res: false }
     );
     setUserVal("");
     changeCaptcha(generateCaptcha());
@@ -26,7 +26,7 @@ const Captcha = () => {
     <div>
       <div className="flex gap-4 text-2xl items-center">
         <div className="h-12 w-40 font-semibold bg-red-300 flex items-center justify-center">
-          <h3>{captcha}</h3>
+          <h3 className="underline decoration-wavy ">{captcha}</h3>
         </div>
         <button onClick={() => changeCaptcha(generateCaptcha())}>
           <TbReload size={32} />

@@ -7,12 +7,12 @@ export const SignUp = () => {
     theme === "black" ? toggleTheme("white") : toggleTheme("black");
   return (
     <div
-      className={`flex items-center justify-center min-h-screen ${
+      className={`flex items-center justify-center min-h-screen pb-20 ${
         theme === "black" ? "bg-black  text-white" : "bg-white  text-black"
       }  `}
     >
       <div
-        className="absolute top-7 right-7 h-11 w-11 rounded-full bg-white border-2"
+        className="absolute top-7 right-7 h-11 w-11 rounded-full hover:scale-105 duration-200 bg-white border-2"
         onClick={handleTheme}
       >
         <BsFillMoonFill
@@ -22,14 +22,16 @@ export const SignUp = () => {
       </div>
       <div className="flex items-center justify-center px-4 py-10 sm:px-6 lg:px-8 sm:py-16 lg:py-24">
         <div className="">
-          <h2 className="text-3xl font-bold  ">Sign Up Form with Captcha</h2>
+          <h2 className="text-xl sm:text-3xl text-center font-bold  ">
+            Sign Up Form with Captcha
+          </h2>
           <form
-            className="mt-8  sm:w-[30rem]"
+            className="mt-8 w-[80%] mx-auto  sm:w-[30rem]"
             onSubmit={(e) => e.preventDefault()}
           >
             <div className="space-y-5">
               <div>
-                <label htmlFor="name" className="text-base font-medium">
+                <label htmlFor="name" className="font-medium">
                   Full Name
                 </label>
                 <div className="mt-2.5">
@@ -42,10 +44,7 @@ export const SignUp = () => {
               </div>
 
               <div>
-                <label
-                  htmlFor="email"
-                  className="text-base font-medium"
-                >
+                <label htmlFor="email" className="font-medium">
                   Email address
                 </label>
                 <div className="mt-2.5">
@@ -58,10 +57,7 @@ export const SignUp = () => {
               </div>
 
               <div>
-                <label
-                  htmlFor="password"
-                  className="text-base font-medium "
-                >
+                <label htmlFor="password" className="font-medium ">
                   Password
                 </label>
                 <div className="mt-2.5">
