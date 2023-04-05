@@ -111,7 +111,7 @@ export const SignUp = () => {
                     <div className="h-12 w-40 font-semibold bg-red-300 flex items-center justify-center">
                       <h3 className="underline decoration-wavy ">{captcha}</h3>
                     </div>
-                    <button onClick={() => changeCaptcha(generateCaptcha())}>
+                    <button type="button" onClick={() => changeCaptcha(generateCaptcha())}>
                       <TbReload size={32} />
                     </button>
                   </div>
